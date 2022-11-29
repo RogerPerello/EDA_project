@@ -1,7 +1,24 @@
 from dateutil.relativedelta import relativedelta
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
+import numpy as np
+import numpy as np
+from scipy.stats import f 
+
+'''Checks if standard deviations of two groups >30 are affected by the same factors and therefore keep their proportion'''
+def ftest_stds(grupo1,grupo2):
+    '''Requires 2 numerical iterables >30 as positional arguments'''
+    a1 = np.array(grupo1)
+    n1 = len(a1)
+    a2 = np.array(grupo2)
+    n2 = len(a2)
+    s1, s2 = np.std(a1), np.std(a2)
+    test=s1/s2
+    p_valor=2*min(f.cdf(test,n1,n2),1-f.cdf(test,n1,n2))
+    if p_valor > 0.05:
+        return True, p_valor
+    else:
+        return False, p_valor
 
 
 '''Calculates the gini coefficient for a dataframe column. Returns the coefficient as well as a dataframe with the corresponding calculations'''
@@ -65,8 +82,8 @@ def date_index_to_monthly(dataframe, column_init, column_final, new_index):
     df_monthly_int_index.index = [str(period.month) for period in new_index]
     return df_monthly, df_monthly_int_index
 
-
-def applies_where_groupby_median_drop(dataframe, column, index_name, value, index_drops=None, median=False):
+''' Limits a dataframe by a column value, applies a groupby index, aggregates it by mean by default (median may be preferred) and drops some of the index values (or none)'''
+def applies_where_groupby_mean_drop(dataframe, column, index_name, value, index_drops=None, median=False):
     '''Requires a dataframe, a column name (string), an index name (string) and value to look for. Accepts a list of index values and a boolean type as optional key arguments'''
     dataframe = dataframe[dataframe[column] == value]
     if median:
@@ -118,5 +135,6 @@ def sum_by_duplicated_values_and_datetime(dataframe, duplicated_column, sum_colu
                         }
         pre_dataframe_list.append(current_dict) # añadimos el diccionario a la lista para el dataframe
         print(f'{current_date} has been filled')
+        print('\n')
     df_total = pd.DataFrame(pre_dataframe_list) # creamos el dataframe con el total por fecha
     return df_total

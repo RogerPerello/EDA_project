@@ -1,3 +1,6 @@
+# NADA DE ESTO LLEGA A USARSE
+
+
 def return_optimal_datetime(dataframes):
     '''Checks optimal index range'''
     '''Requires a list of dataframes, all with a datetime index, as a positional argument'''
