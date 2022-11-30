@@ -61,7 +61,7 @@ def date_index_to_monthly(dataframe, column_init, column_final, new_index):
 
 
 ''' Limits a dataframe by a column value, applies a groupby index, aggregates it by mean by default (median may be preferred) and drops some of the index values (or none)'''
-def applies_where_groupby_mean_drop(dataframe, column, index_name, value, index_drops=None, median=False):
+def apply_where_groupby_mean_drop(dataframe, column, index_name, value, index_drops=None, median=False):
     '''Requires a dataframe, a column name (string), the index name (string) and value to look for. Accepts a list of index values and a boolean type as optional key arguments'''
     dataframe = dataframe[dataframe[column] == value]
     if median:
