@@ -1,22 +1,5 @@
 from dateutil.relativedelta import relativedelta
 import pandas as pd
-import numpy as np
-from scipy.stats import f 
-
-
-'''Checks if standard deviations of two groups >30 are affected by the same factors and therefore keep their proportion'''
-def ftest_stds(grupo1, grupo2):
-    '''Requires 2 numerical iterables >30 as positional arguments'''
-    '''requires from scipy.stats import f and numpy as np'''
-    a1, a2 = np.array(grupo1), np.array(grupo2)
-    n1, n2 = len(a1), len(a2)
-    s1, s2 = np.std(a1), np.std(a2)
-    test = s1 / s2
-    p_valor = 2 * min(f.cdf(test, n1, n2), 1 - f.cdf(test, n1, n2))
-    if p_valor > 0.05:
-        return True, p_valor
-    else:
-        return False, p_valor
 
 
 '''Calculates the gini coefficient for a dataframe column. Returns the coefficient as well as a dataframe with the corresponding calculations'''
