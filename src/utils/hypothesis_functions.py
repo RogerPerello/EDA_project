@@ -1,5 +1,7 @@
 from dateutil.relativedelta import relativedelta
 import pandas as pd
+import numpy as np
+from scipy.stats import f
 
 
 '''Calculates the gini coefficient for a dataframe column. Returns the coefficient as well as a dataframe with the corresponding calculations'''
@@ -99,3 +101,17 @@ def sum_by_duplicated_values_and_datetime(dataframe, duplicated_column, sum_colu
         print('\n')
     df_total = pd.DataFrame(pre_dataframe_list) 
     return df_total
+
+
+'''Calculates ftest (¿Are both variances equal?) and returns pvalue'''
+def Ftest(group_1,group_2):
+    '''Requires two lists as positional arguments'''
+    '''Requires numpy as np and f from scipy.stats'''
+    a1 = 1.0*np.array(group_1)
+    n1 = len(a1)
+    a2 = 1.0*np.array(group_2)
+    n2 = len(a2)
+    s1, s2 = np.std(a1,ddof=1), np.std(a2,ddof=1)
+    test=(s1/s2)**2
+    p_value=2*min(f.cdf(test,n1-1,n2-1),1-f.cdf(test,n1-1,n2-1))
+    return p_value
