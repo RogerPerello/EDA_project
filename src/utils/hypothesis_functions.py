@@ -60,7 +60,7 @@ def apply_where_groupby_mean_drop(dataframe, column, index_name, value, index_dr
 
 '''In a datetime-indexed dataframe, for each datetime in the supplied list, looks for the duplicated values of the chosen column of strings. 
 If one is not found for a certain datetime, looks for it at the next existent datetime (default increase = 1 day).
-In the subsequent table, sums the corresponding values for each datetime that are in chosen column of numeric values, and returns a two-column dataframe that equates each sum to its datetime index'''
+In the subsequent table, sums the corresponding values for each datetime that are in the chosen column of numeric values, and returns a two-column dataframe that equates each sum to its datetime index'''
 def sum_by_duplicated_values_and_datetime(dataframe, duplicated_column, sum_colum, datetime_list, days_increase=1):
     '''Requires positional arguments: dataframe with datetime indexes, the name (string) of a column of strings, the name (string) of a numeric column and a list of datetimes
     Accepts an integer as a key argument (default is 1)'''
