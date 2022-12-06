@@ -14,12 +14,9 @@ def decumulate_columns(dataframe, excluded=None):
 
 
 def index_by_datetime(dataframe, name='date'):
-    '''Sets datetime column as index'''
+    '''Sets a datetime column as an index'''
     '''Requires a dataframe with a datetime column as a positional argument and it may have an alternative name (string) for that column as a key argument'''
     '''Requires pandas as pd'''
-    for column in dataframe.columns:
-        if column == name:
-            dataframe.sort_values(column, inplace=True)
-            dataframe[column] = pd.to_datetime(dataframe[column], exact=False)
-            dataframe.set_index(name, inplace=True)
-            break
+    dataframe.sort_values(name, inplace=True)
+    dataframe[name] = pd.to_datetime(dataframe[name], exact=False)
+    dataframe.set_index(name, inplace=True)

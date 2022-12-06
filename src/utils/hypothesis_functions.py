@@ -24,10 +24,10 @@ def calculate_gini(dataframe, x_column):
     return gini, dataframe
 
 
-'''Based on a dataframe with a datetime index, creates a single column dataframe with an index by month containing the sum of the values of each previous interval. 
-Returns the same resulting dataframe with a datetime index and an integer index'''
+'''Based on a dataframe with a datetime index, creates a single column dataframe where each index represents a month and contains the sum of the values of the previous interval. 
+Returns the same resulting dataframe with both a datetime index and an integer index'''
 def date_index_to_monthly(dataframe, column_init, column_final, new_index):
-    '''Requires a dataframe with a datetime index, the column to sum (string), the name of the column in the resulting dataframe (string), 
+    '''Requires a dataframe with a datetime index, the column to sum (string), the name for that column in the resulting dataframe (string), 
     and a list with the months of the new index (list of datetimes)'''
     '''Requires relativedelta from dateutil.relativedelta and pandas as pd'''
     losses_list = []
@@ -45,24 +45,24 @@ def date_index_to_monthly(dataframe, column_init, column_final, new_index):
     return df_monthly, df_monthly_int_index
 
 
-''' Limits a dataframe by a column value, applies a groupby index, aggregates it by mean by default (median may be preferred) and drops some of the index values (or none)'''
-def apply_where_groupby_mean_drop(dataframe, column, index_name, value, index_drops=None, median=False):
-    '''Requires a dataframe, a column name (string), the index name (string) and value to look for. Accepts a list of index values and a boolean type as optional key arguments'''
+''' Conditions a dataframe by a column value, applies a group by index, aggregates it by mean by default (median may be preferred) and drops some of the index values (or none)'''
+def apply_condition_groupby_mean_drop(dataframe, column, index_name, value, index_drops=None, median=False):
+    '''Requires a dataframe, a column name (string), the index name (string) and value to condition for. Accepts a list of index values and a boolean type as optional key arguments'''
     dataframe = dataframe[dataframe[column] == value]
     if median:
         dataframe = dataframe.groupby(index_name).median(numeric_only=True)
     else:
         dataframe = dataframe.groupby(index_name).mean(numeric_only=True)
     if index_drops[0]:
-        dataframe.drop(index=index_drops, inplace=True)
+        dataframe = dataframe.drop(index=index_drops)
     return dataframe
 
 
-'''In a datetime-indexed dataframe, for each datetime in the supplied list, looks for the duplicated values of the chosen column of strings. 
-If one is not found for a certain datetime, looks for it at the next existent datetime (default increase = 1 day).
-In the subsequent table, sums the corresponding values for each datetime that are in the chosen column of numeric values, and returns a two-column dataframe that equates each sum to its datetime index'''
+'''In a datetime-indexed dataframe, for each datetime in the supplied list, looks for the duplicated string-values of the chosen column of strings. 
+If one is not found for a certain datetime, looks for it at the next existent datetime (default increase = 1 day) until it's found. Then, assigns that string-value to the original supplied datetime
+In the subsequent table, sums the corresponding number-values (that are in the chosen column of numeric values) for each string-value found for every datetime, and returns a two-column dataframe with each sum and its datetime'''
 def sum_by_duplicated_values_and_datetime(dataframe, duplicated_column, sum_colum, datetime_list, days_increase=1):
-    '''Requires positional arguments: dataframe with datetime indexes, the name (string) of a column of strings, the name (string) of a numeric column and a list of datetimes
+    '''Requires positional arguments: a dataframe with a datetime index, the name (string) of a column of strings, the name (string) of a numeric column and a list of datetimes
     Accepts an integer as a key argument (default is 1)'''
     '''Requires relativedelta from dateutil.relativedelta and pandas as pd'''
     duplicated_list = dataframe[duplicated_column].drop_duplicates() 
@@ -103,7 +103,7 @@ def sum_by_duplicated_values_and_datetime(dataframe, duplicated_column, sum_colu
     return df_total
 
 
-'''Calculates ftest (¿Are both variances equal?) and returns pvalue'''
+'''Calculates ftest (are both variances equal?) and returns its pvalue'''
 def Ftest(group_1,group_2):
     '''Requires two lists as positional arguments'''
     '''Requires numpy as np and f from scipy.stats'''
