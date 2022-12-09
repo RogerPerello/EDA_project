@@ -4,7 +4,21 @@
     <img src="/src/data/foto_eda.png" width="1000">
 </p>
 
-Un repositorio sobre el EDA preparado como proyecto para el curso Data Science Part Time de la escuela THEBRIDGE. El código es todo en Python (se utilizan notebooks de Jupiter), si bien incluye archivos .pdf con la Memoria y las Referencias utilizadas.
+Un repositorio con el EDA preparado como proyecto para el curso Data Science Part Time de la escuela THEBRIDGE. El código es todo en Python (se utilizan notebooks de Jupiter), si bien se incluyen un par de archivos .pdf con la Memoria y las Referencias utilizadas.
+
+## Guía de carpetas
+### [Memoria](/Memoria.pdf)
+- Documento que detalla el proceso (con limpieza, hipótesis y total de conclusiones).
+- Incluye anexos con los gráficos, así como otras imágenes aclaratorias.
+### [Referencias](/Referencias.pdf)
+- Listado de páginas utilizadas a modo de apoyo durante el proyecto.
+- Se dividen por su enfoque, que puede ser formal o de contenidos.
+### [src](/src)
+- [EDA](/src/EDA.pdf), que es la versión final del código en un Jupiter de Python.
+- [data](/src/data), que contiene imágenes importadas por algunos archivos y los datasets originales.
+- [notebooks](/src/notebooks), con todas las pruebas repartidas por diversos notebooks Jupiter.
+- [utils](/src/utils), con aquellas funciones de uso frecuente que se llaman en el archivo EDA.
+
 
 ## Resumen
 Es una comparativa de seis datasets de tamaños variables sobre diversos aspectos de la guerra de Ucrania que tienen que ver con las pérdidas (sobre todo, las rusas, de las que hay más datos disponibles), los refugiados y los precios en los mercados locales. El nexo de la mayoría son las fechas. Las hipótesis son:
@@ -20,7 +34,7 @@ A modo de esquema, se puede resumir así:
 A modo de esquema, se puede resumir así:
 [Uso de material soviético = más capturas]
 
-## Algunas onclusiones
+## Algunas conclusiones
 -	No hay relación entre la cercanía al frente y el precio de los productos. La guerra moderna, con artillería de larga distancia y bombardeos aéreos, y con un frente amplio, implica que todas las ciudades sean susceptibles de sufrir problemas puntuales de suministro independientemente de su proximidad al enemigo.
 <img src="/src/data/1-product_by_distance.png" width="400">
 
