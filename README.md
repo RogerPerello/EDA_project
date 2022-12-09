@@ -24,17 +24,22 @@ A modo de esquema, se puede resumir así:
 -	No hay relación entre la cercanía al frente y el precio de los productos. La guerra moderna, con artillería de larga distancia y bombardeos aéreos, y con un frente amplio, implica que todas las ciudades sean susceptibles de sufrir problemas puntuales de suministro independientemente de su proximidad al enemigo.
 <img src="/src/data/1-product_by_distance.png" width="400">
 
+
 -	Los precios de los antibióticos y los antipiréticos, además de ser superiores en términos generales, oscilan mucho. Como el país se encuentra en situación de guerra, es de prever que la demanda de este tipo de medicamentos, muy útiles para una persona herida o con fiebre, se haya elevado. De ahí que oscilen y se encarezcan de un modo dramático comparados con los agentes vasodilatadores, que sirven para tratar la tensión arterial, un problema de salud cuyos factores de riesgo no se ven agravados en un conflicto bélico.
 <img src="/src/data/2-med_by_distance.png" width="400">
+
 
 -	Es poco probable que las diferencias en el precio de los medicamentos de ciudad a ciudad, por sí solas, supongan un problema para los consumidores, ya que el índice de Gini es bajo para todas; el único problema sería que la demanda subiese tanto que llegasen a escasear (o que la oferta se redujese).
 <img src="/src/data/3-med_gini.png" width="400">
 
+
 -	La mayoría de bajas son de APC. Esas son las siglas de Armored Personnel Carrier, lo cual implica que hay bajas de personal simultáneamente, ya que se destruyen vehículos dedicados al transporte de personal, si bien con capacidades defensivas.
 <img src="/src/data/4-losses_by_type.png" width="400">
 
+
 - La mayor parte de bajas diarias para el período del sexto al noveno mes están por debajo de la mediana.
 <img src="/src/data/5-losses_by_date.png" width="400">
+
 
 -	La mayoría de pérdidas del bando ruso son vehículos de transporte de infantería armados (soviéticos) y vehículos de transporte no armados (no soviéticos).
 <img src="/src/data/6-losses_soviet_or_not.png" width="400">
