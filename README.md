@@ -20,8 +20,8 @@ Un repositorio con el EDA preparado como proyecto para el curso Data Science Par
 - [utils](/src/utils), con aquellas funciones de uso frecuente que se llaman en el archivo EDA.
 
 
-## Resumen
-Es una comparativa de seis datasets de tamaños variables sobre diversos aspectos de la guerra de Ucrania que tienen que ver con las pérdidas (sobre todo, las rusas, de las que hay más datos disponibles), los refugiados y los precios en los mercados locales. El nexo de la mayoría son las fechas. Las hipótesis son:
+## Consideraciones iniciales
+Se parte de una comparativa de seis datasets de tamaños variables sobre diversos aspectos de la guerra de Ucrania que tienen que ver con las pérdidas (sobre todo, las rusas, de las que hay más datos disponibles), los refugiados y los precios en los mercados locales. El nexo de la mayoría son las fechas. Las hipótesis son:
 1) Los precios en Ucrania oscilan en función del número de refugiados huidos del país (cuantos más hay, menos demanda) y de la cercanía al frente de los puestos de venta (cuanto más cerca están, más costoso es transportar los productos, y más caros se venden). Asimismo, un peor rendimiento del bando ruso debe animar a los proveedores extranjeros a vender en el país y aumentar la oferta (con lo cual los productos son más baratos).
 A modo de esquema, se puede resumir así:
 [Más refugiados, mayor lejanía del frente o más pérdidas rusas = precios más bajos]
