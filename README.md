@@ -4,7 +4,16 @@
     <img src="/src/data/foto_eda.png" width="1000">
 </p>
 
-Un repositorio con el EDA preparado como proyecto para el curso Data Science Part Time de la escuela THEBRIDGE. El código es todo en Python (se utilizan notebooks de Jupiter), si bien se incluyen un par de archivos .pdf con la Memoria y las Referencias utilizadas.
+El estudio es un ejercicio para el programa Part Time de la plataforma THEBRIDGE. Se utilizan tablas de datos de distintas fuentes, relacionadas con la guerra de Ucrania, y se les asignan una serie de hipótesis. Durante el transcurso de las pesquisas, las hay que se prueban y que se desmienten, y se encuentran, por añadidura, otros datos relevantes que sirven como conclusiones.
+
+Se tiene en cuenta que los datos pueden estar sesgados, ya que en general proceden de fuentes ucranianas, aunque la coherencia entre las distintas tablas y el hecho de que vayan acompañadas, en algunos casos, de fotografías, así como la reputación de la plataforma de la que provienen la mayoría —es decir, Kaggle—, los dotan de congruencia. Esas imágenes pueden descargarse de la propia web, en la página del dataset correspondiente.
+
+Para las pruebas que dan como resultado un pvalor (como el ttest), como se trata de un ejercicio, se trabaja como si las distribuciones fueran de tipo normal. A las conclusiones de cada hipótesis las siguen teorías que explican en qué puede traducirse tal o cual argumento matemático si se le busca una significación. Convergen, por esta vía, los datos “puros”, calculados directamente de las tablas obtenidas, y la reflexión posterior.
+
+En base a esos razonamientos, las conclusiones finales van un punto más allá: con una combinación de los desenlaces de cada hipótesis, se le proponen al bando ucraniano una serie de consideraciones. Por ejemplo, como en la hipótesis 1 se detecta que el precio de los medicamentos importados no cambia en función de la cercanía al frente de las ciudades, se comenta que no sería necesario aplicar una rebaja a las que están más próximas a la batalla. Asimismo, como el precio de algunos oscila y crece con el paso de la guerra, se recomienda solicitar a los aliados que los envíen con más frecuencia. 
+
+El valor de esos juicios últimos deberá sopesarlo el lector con los datos en mano y haciendo uso de su sentido común, pues no dejan de ser apreciaciones que, si bien están muy pensadas, no están exentas —como es inevitable para este tipo de deducciones— de un cierto grado de subjetividad. Tanto si se estiman ciertas como si no, habrán cumplido su propósito con creces si sirven como método de aprendizaje, para animar el debate o para promover algún que otro análisis que las desmienta o corrobore.
+
 
 ## Guía de carpetas
 ### [Memoria](/Memoria.pdf)
@@ -20,8 +29,8 @@ Un repositorio con el EDA preparado como proyecto para el curso Data Science Par
 - [utils](/src/utils), con aquellas funciones de uso frecuente que se llaman en el archivo EDA.
 
 
-## Consideraciones iniciales
-Se parte de una comparativa de seis datasets de tamaños variables sobre diversos aspectos de la guerra de Ucrania que tienen que ver con las pérdidas (sobre todo, las rusas, de las que hay más datos disponibles), los refugiados y los precios en los mercados locales. El nexo de la mayoría son las fechas. Las hipótesis son:
+## Punto de partida
+Se parte de seis datasets de tamaños variables sobre diversos aspectos de la guerra de Ucrania que tienen que ver con las pérdidas (sobre todo, las rusas, de las que hay más datos disponibles), los refugiados y los precios en los mercados locales. El nexo de la mayoría son las fechas. Las hipótesis son:
 1) Los precios en Ucrania oscilan en función del número de refugiados huidos del país (cuantos más hay, menos demanda) y de la cercanía al frente de los puestos de venta (cuanto más cerca están, más costoso es transportar los productos, y más caros se venden). Asimismo, un peor rendimiento del bando ruso debe animar a los proveedores extranjeros a vender en el país y aumentar la oferta (con lo cual los productos son más baratos).
 A modo de esquema, se puede resumir así:
 [Más refugiados, mayor lejanía del frente o más pérdidas rusas = precios más bajos]
