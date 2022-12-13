@@ -4,7 +4,7 @@
     <img src="/src/data/foto_eda.png" width="1000">
 </p>
 
-Este EDA (del inglés, análisis exploratorio de datos) es un ejercicio para el programa Part Time de la plataforma THEBRIDGE. Se utilizan tablas de datos de distintas fuentes, relacionadas con la guerra de Ucrania, y se les asignan una serie de hipótesis. Durante el transcurso de las pesquisas, las hay que se prueban y que se desmienten, y se encuentran, por añadidura, otros datos relevantes que sirven como conclusiones.
+Este EDA (del inglés, análisis exploratorio de datos) es un ejercicio para el programa Part Time de la plataforma THEBRIDGE. Se utilizan tablas con datos de distintas fuentes originales, relacionadas con la guerra de Ucrania, y se les asignan una serie de hipótesis. Durante el transcurso de las pesquisas, las hay que se prueban y que se desmienten, y se encuentran, por añadidura, otros datos relevantes que sirven como conclusiones.
 
 Se tiene en cuenta que los datos pueden estar sesgados, ya que en general proceden de fuentes ucranianas, aunque la coherencia entre las distintas tablas y el hecho de que vayan acompañadas, en algunos casos, de fotografías, así como la reputación de la plataforma de la que provienen la mayoría —es decir, Kaggle—, los dotan de congruencia. Esas imágenes pueden descargarse de la propia web, en la página del dataset correspondiente.
 
