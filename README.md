@@ -16,6 +16,8 @@ El valor de esos juicios últimos deberá sopesarlo el lector con los datos en m
 
 
 ## Guía de carpetas
+### [Diapositivas](/Diapositivas.pptx)
+- Diapositivas empleadas la presentación del trabajo.
 ### [Memoria](/Memoria.pdf)
 - Documento que detalla el proceso (con limpieza, hipótesis y total de conclusiones).
 - Incluye anexos con los gráficos, así como otras imágenes aclaratorias.
