@@ -32,18 +32,12 @@ El valor de esos juicios últimos deberá sopesarlo el lector con los datos en m
 
 
 ## Punto de partida
-Se parte de seis datasets de tamaños variables sobre diversos aspectos de la guerra de Ucrania que tienen que ver con las pérdidas (sobre todo, las rusas, de las que hay más datos disponibles), los refugiados y los precios en los mercados locales. El nexo de la mayoría son las fechas. Las hipótesis son:
-1) Los precios en Ucrania oscilan en función del número de refugiados huidos del país (cuantos más hay, menos demanda) y de la cercanía al frente de los puestos de venta (cuanto más cerca están, más costoso es transportar los productos, y más caros se venden). Asimismo, un peor rendimiento del bando ruso debe animar a los proveedores extranjeros a vender en el país y aumentar la oferta (con lo cual los productos son más baratos).
-A modo de esquema, se puede resumir así:
-[Más refugiados, mayor lejanía del frente o más pérdidas rusas = precios más bajos]
+Se utilizan seis datasets de tamaños variables sobre diversos aspectos de la guerra de Ucrania que tienen que ver con las pérdidas (sobre todo, las rusas, de las que hay más datos disponibles), los refugiados y los precios en los mercados locales. El nexo de la mayoría son las fechas. Las hipótesis con las que se inicia la investigación son:
+1) Más refugiados, mayor lejanía del frente o más pérdidas rusas = precios más bajos
 
-2) Con el paso del tiempo, aumentan las pérdidas materiales rusas y se reducen las humanas. Ello es indicativo de una creciente preocupación de la administración rusa por la opinión pública, con lo que, entre otras cosas, se sirve menos de infantería para minimizar la cuenta de bajas.
-A modo de esquema, se puede resumir así:
-[Uso mayor de tropas mecanizadas = uso reducido de soldados rasos = más pérdidas materiales y menos muertos]
+2) Uso mayor de tropas mecanizadas = uso reducido de soldados rasos = más pérdidas materiales y menos muertos
 
-3) Los ejércitos ruso y ucraniano utilizan mucho material de la Unión Soviética, que, en comparación con el equipamiento moderno, tiende a fallar y a capturarse con mayor frecuencia.
-A modo de esquema, se puede resumir así:
-[Uso de material soviético = más capturas]
+3) Uso de material soviético = más capturas
 
 ## Algunas conclusiones
 -	No hay relación entre la cercanía al frente y el precio de los productos. La guerra moderna, con artillería de larga distancia y bombardeos aéreos, y con un frente amplio, implica que todas las ciudades sean susceptibles de sufrir problemas puntuales de suministro independientemente de su proximidad al enemigo.
